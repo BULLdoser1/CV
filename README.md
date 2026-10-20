@@ -1,5 +1,5 @@
-Я Алексей Попеску, очень приятно познакомиться. Люблю вас.
+# Python Backend Developer
 
-[PopeskuAlexey_CV.pdf](./PopeskuAlexey_CV.pdf)
+Я Python-разработчик. Рассматриваю предложения об удалённой работе. Подробнее обо мне и моём опыте — в резюме.
 
-Исходник для редактирования: [cv.html](./cv.html)
+**[Открыть резюме в PDF](./PopeskuAlexey_CV.pdf)** · [Telegram](https://t.me/BULLdoser1) · [Email](mailto:alexey.popesku0@gmail.com)

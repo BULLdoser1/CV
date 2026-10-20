@@ -4,6 +4,20 @@
   <meta charset="utf-8">
   <title>PopeskuAlexey_CV</title>
   <style>
+    @font-face {
+      font-family: "Liberation Sans";
+      src: url("fonts/LiberationSans-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Liberation Sans";
+      src: url("fonts/LiberationSans-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+    }
+
     @page {
       size: A4;
       margin: 0;
@@ -17,7 +31,7 @@
       margin: 0;
       background: #a0a0a0;
       color: #1f2933;
-      font-family: Arial, "Liberation Sans", sans-serif;
+      font-family: "Liberation Sans", Arial, sans-serif;
       font-size: 11.5px;
       line-height: 1.2;
     }
@@ -51,6 +65,17 @@
       margin-bottom: 14px;
     }
 
+    .location {
+      color: #4a5462;
+      line-height: 1.35;
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     h2 {
       color: #111726;
       font-size: 13px;
@@ -77,11 +102,12 @@
     }
 
     .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 12px;
       font-size: 11.2px;
       line-height: 1.35;
+    }
+
+    .skills p {
+      margin-bottom: 6px;
     }
 
     .strengths {
@@ -134,12 +160,6 @@
       margin-bottom: 5px;
     }
 
-    .team {
-      color: #4a5462;
-      font-size: 10.8px;
-      margin-bottom: 7px;
-    }
-
     .project ul {
       margin: 0;
       padding-left: 16px;
@@ -165,42 +185,55 @@
     <aside class="sidebar">
       <h1>Алексей<br>Попеску</h1>
       <p class="role">Python Backend Developer</p>
+      <p class="location">Москва · удалённая работа<br>Полная занятость</p>
 
       <section>
         <h2>Контакты</h2>
-        <p class="contact">Telegram: @BULLdoser1<br>GitHub: github.com/BULLdoser1</p>
+        <p class="contact"><a href="mailto:alexey.popesku0@gmail.com">alexey.popesku0@gmail.com</a><br>
+          Telegram: <a href="https://t.me/BULLdoser1">@BULLdoser1</a><br>
+          GitHub: <a href="https://github.com/BULLdoser1">github.com/BULLdoser1</a></p>
       </section>
 
       <section>
         <h2>Профиль</h2>
-        <p class="profile">Python backend-разработчик.<br>Основной фокус: REST API, AI и LLM-интеграции, очереди, PostgreSQL, контейнеризация и поддержка production API.</p>
+        <p class="profile">Python Backend Developer с 3+ годами коммерческого опыта. Специализируюсь на разработке REST API, интеграциях с внешними системами и асинхронной обработке задач.</p>
+        <p class="profile" style="margin-top: 6px">Разработал backend-компоненты GenAI-платформы и telecom-интеграций. Реализовал идемпотентную обработку операций, автоматические повторы при временных сбоях и оптимизировал работу с PostgreSQL.</p>
       </section>
 
       <section>
         <h2>Технологии</h2>
         <div class="skills">
-          <span>Python</span><span>FastAPI</span><span>PostgreSQL</span>
-          <span>SQLAlchemy</span><span>Celery</span><span>RabbitMQ</span>
-          <span>Docker</span><span>Pytest</span><span>OpenAPI</span>
-          <span>LLM API</span><span>Grafana</span><span>Codex CLI</span>
-          <span>Claude Code</span>
+          <p><strong>Backend:</strong> Python, FastAPI, aiogram</p>
+          <p><strong>API:</strong> REST API, OpenAPI, WebSocket</p>
+          <p><strong>Базы данных:</strong> PostgreSQL, SQLAlchemy, pgvector</p>
+          <p><strong>Фоновые задачи:</strong> Celery, RabbitMQ</p>
+          <p><strong>Тестирование:</strong> Pytest — unit- и интеграционные тесты</p>
+          <p><strong>Наблюдаемость:</strong> OpenTelemetry, Grafana</p>
+          <p><strong>Инструменты:</strong> Docker, Git, Jira</p>
         </div>
       </section>
 
       <section>
         <h2>Сильные стороны</h2>
         <ul class="strengths">
-          <li>Проектирование REST API и OpenAPI-контрактов</li>
-          <li>Интеграция LLM и API-сервисов</li>
-          <li>Очереди, фоновые задачи и retry-сценарии</li>
-          <li>PostgreSQL, миграции и оптимизация запросов</li>
-          <li>Коммуникация с frontend, QA, BA и DevOps</li>
+          <li>REST API и интеграции с внешними системами</li>
+          <li>Очереди, фоновые задачи, контроль статусов и повторные запуски</li>
+          <li>Идемпотентность и обработка callback-ов</li>
+          <li>Модели данных, индексы и миграции PostgreSQL</li>
+          <li>Обработка документов и векторное хранение</li>
         </ul>
       </section>
 
       <section>
+        <h2>Образование</h2>
+        <p class="profile"><strong>Тюменский государственный университет</strong><br>
+          Высшее образование, 2022<br>
+          Информационная безопасность телекоммуникационных систем</p>
+      </section>
+
+      <section>
         <h2>Языки</h2>
-        <p class="languages">Русский<br>English</p>
+        <p class="languages">Русский — родной</p>
       </section>
     </aside>
 
@@ -209,63 +242,55 @@
 
       <article class="job">
         <div class="job-head">
-          <h3>Python Backend Developer</h3>
-          <p class="date">Январь 2025 - Июль 2026</p>
+          <h3>Bell Integrator</h3>
+          <p class="date">Январь 2025 — Июль 2026</p>
         </div>
-        <p class="company">Bell Integrator</p>
+        <p class="company">Python-разработчик</p>
 
         <section class="project">
           <p class="project-title">GenAI-платформа для telecom-компании</p>
-          <p class="team">Проектная команда: 3 backend-разработчика, AI engineer, frontend-разработчик, QA, BA, PM, DevOps</p>
           <ul>
-            <li>Разработал на Python FastAPI API для загрузки документов, URL и файлов, которые использовались для AI-ответов по внутренним данным.</li>
-            <li>Спроектировал PostgreSQL-схемы для метаданных, ролей, prompt templates и истории пользовательских запросов.</li>
-            <li>Реализовал очереди обработки через RabbitMQ, фоновые задачи и повторные запуски через Celery.</li>
-            <li>Настроил Docker окружение для локальной проверки, контейнеризации и deployment-сценариев сервиса.</li>
-            <li>Участвовал в интеграции GPT-5 в backend API для LLM-ответов и DALL-E3 для генерации изображений по запросам.</li>
-            <li>Применил Codex CLI и Claude Code для прототипирования, анализа кода и проверки backend-решений.</li>
+            <li>Разработал REST API на FastAPI для загрузки и обработки документов, управления доступом и истории запросов; спроектировал модели на SQLAlchemy.</li>
+            <li>Разработал асинхронный пайплайн индексации документов на Celery и RabbitMQ: парсинг, разбиение на чанки, интеграцию с embedding API и сохранение векторов в PostgreSQL/pgvector.</li>
+            <li>Сократил среднее время индексации документов <strong>с 40 до 18 секунд (−55%)</strong> за счёт пакетной отправки чанков в embedding-сервис и массовой вставки данных в PostgreSQL.</li>
+            <li>Вынес длительную обработку документов из HTTP-запросов в фоновые задачи. Добавил возврат идентификатора операции из API, отслеживание статусов и повторное выполнение неуспешных задач.</li>
           </ul>
         </section>
 
         <section class="project">
           <p class="project-title">Telecom API Platform</p>
-          <p class="team">Проектная команда: 3 backend-разработчика, frontend-разработчик, QA, BA, PM, DevOps</p>
           <ul>
-            <li>Разработал на FastAPI versioned API contracts, idempotent endpoints и telecom-интеграции с partner endpoints.</li>
-            <li>Спроектировал PostgreSQL-модели для партнеров, интеграций, billing callbacks и статусов операций.</li>
-            <li>Реализовал queue-based retries и асинхронную обработку через RabbitMQ; PostgreSQL применил для состояний workflow.</li>
-            <li>Настроил Docker для локальной проверки сервисов; участвовал в подключении OpenTelemetry и Grafana для мониторинга API.</li>
-            <li>Участвовал в настройке CI/CD пайплайнов совместно с DevOps для backend-сервисов.</li>
+            <li>Разработал REST API на FastAPI для подключения и отключения абонентских услуг через биллинговые и партнёрские системы. Спроектировал модели операций и их статусов в PostgreSQL, реализовал обработку ответов внешних систем через callback-и.</li>
+            <li>Снизил число операций с ручным повторным запуском <strong>на 70%</strong> благодаря автоматическим повторам и контролю статусов.</li>
+            <li>Реализовал идемпотентную обработку интеграционных операций, повторных и запоздалых callback-ов для защиты от дублирующего выполнения операций.</li>
+            <li>Принял участие во внедрении OpenTelemetry и Grafana для мониторинга API и диагностики ошибок интеграций.</li>
           </ul>
         </section>
       </article>
 
       <article class="job">
         <div class="job-head">
-          <h3>Python Backend Developer</h3>
-          <p class="date">Июнь 2023 - Декабрь 2024</p>
+          <h3>Akd Group</h3>
+          <p class="date">Июнь 2023 — Декабрь 2024</p>
         </div>
-        <p class="company">AKDev Group</p>
+        <p class="company">Python-разработчик</p>
 
         <section class="project">
-          <p class="project-title">API для CRM-платформы</p>
-          <p class="team">Проектная команда: 2 backend-разработчика, 2 frontend-разработчика, QA, UI и UX, PM</p>
+          <p class="project-title">CRM для спортивных клубов</p>
           <ul>
-            <li>Разработал API для CRM-платформы управления спортивными клубами: участники, группы, команды, тренировки, матчи и события.</li>
-            <li>Реализовал backend-логику регистрации участников, управления составами команд и административных сценариев для тренеров.</li>
-            <li>В PostgreSQL проектировал таблицы, связи, индексы и миграции для участников, платежей, событий и результатов соревнований.</li>
-            <li>Pytest: unit и integration-тесты; FastAPI и Pydantic: валидация данных и единый формат ошибок для frontend.</li>
+            <li>Разработал REST API на FastAPI для участников, команд, тренировок и соревнований; спроектировал модели, индексы и миграции PostgreSQL на SQLAlchemy.</li>
+            <li>Разработал Telegram-бота на aiogram для CRM спортивных клубов: просмотр расписания, запись на тренировку и просмотр состава команды. Автоматизация сократила время записи участников <strong>на 60%</strong>.</li>
+            <li>Покрыл интеграционными тестами на Pytest API записи участников на тренировки: создание записи, обработку повторных запросов и ошибок входных данных; проверил ответы API и состояние PostgreSQL.</li>
           </ul>
         </section>
 
         <section class="project">
           <p class="project-title">Платформа клиентской поддержки для банка</p>
-          <p class="team">Проектная команда: 3 backend-разработчика, 2 frontend-разработчика, QA, PM, Team Lead</p>
           <ul>
-            <li>Разработал backend-часть real-time чата для обработки обращений клиентов банка.</li>
-            <li>Реализовал WebSocket-сценарии, очереди операторов, приоритизацию обращений и хранение истории сообщений.</li>
-            <li>Python: backend-логика чата; RabbitMQ: очереди операторов; PostgreSQL: история сообщений и обращений.</li>
-            <li>Docker: локальное окружение; API-контракты: операторский интерфейс.</li>
+            <li>Реализовал серверную логику чата на WebSocket; обеспечил стабильную работу при нагрузке <strong>до 1 000 одновременных соединений</strong>.</li>
+            <li>Реализовал курсорную пагинацию истории переписки в PostgreSQL по времени и ID сообщения; добавил составной индекс по идентификатору обращения, времени и ID сообщения.</li>
+            <li>Принял участие в разработке очередей операторов, приоритизации и распределения обращений между операторами.</li>
+            <li>Реализовал передачу новых обращений из чата через RabbitMQ в обработчик распределения между операторами, отделив приём обращения от назначения ответственного.</li>
           </ul>
         </section>
       </article>
